@@ -26,8 +26,82 @@ formEl.addEventListener('submit', (e) => {
     };
     currentId++;
     chicks.push(newChick);
+
+    displayChicks();
 });
 
-/* Display Functions */
+function chickClickHandler(chick) {
+    if (chick.hp <= 0) return;
+    if (Math.random() < 0.33) {
+        chick.hp--;
+        alert('You warmed ' + chick.name + 'now the chick is toasty warm! They look so cuddly!');
+    } else {
+        alert(
+            'You tried to warm ' +
+                chick.name +
+                ' but the heat lamp broke. Strange... you just replaced the bulb.'
+        );
+    }
 
-// (don't forget to call any display functions you want to run on page load!)
+    // farmer HP decrement with chick trying to eat brains
+    if (Math.random() < 0.5) {
+        farmerHp--;
+        alert(
+            chick.name +
+                " pecked at your face while you were holding them. They just broke a little skin... but the chick's eyes seemed different than usual."
+        );
+    } else {
+        alert(
+            chick.name +
+                ' tried to nip at your face while you were holding them. There was a little seed on your nose! Silly chick. So cute!'
+        );
+    }
+
+    if (Math.random() < 0.27) {
+        farmerHp--;
+        alert(
+            "You could have sworn you just heard ' + chick.name + ' say something... it almost sounded like they said the word 'rains'?"
+        );
+    } else {
+        alert(
+            'You just heard ' +
+                chick.name +
+                ' chirp so beautifully! Their voice kind of sounds like a zombie though. Ha!'
+        );
+    }
+
+    if (chick.hp === 0) {
+        hatchedCount++;
+    }
+
+    if (farmerHp === 0) {
+        farmerImgEl.classList.add('game-over');
+        alert('GAME OVER');
+    }
+
+    // updating the DOM
+    farmerHPEl.textContent = farmerHp;
+    hatchedNumberEl.textContent = hatchedCount;
+
+    const hpEl = document.getElementById(`chick-hp-${chick.id}`);
+    hpEl.textContent = chick.hp < 0 ? 0 : chick.hp;
+
+    const eggEl = document.getElementById(`chick-${chick.id}`);
+    eggEl.textContent = chick.hp > 0 ? '🥚' : '🐣';
+
+    const srEl = document.getElementById(`chick-sr-${chick.id}`);
+    srEl.textContent = chick.hp > 0 ? 'egg emoji' : 'hatched chick emoji';
+}
+/* Display Functions */
+function displayChicks() {
+    chickListEl.textContent = '';
+
+    for (let chick of chicks) {
+        const chickEl = renderChick(chick);
+        chickEl.addEventListener('click', () => {
+            chickClickHandler(chick);
+        });
+        chickListEl.append(chickEl);
+    }
+}
+displayChicks();
