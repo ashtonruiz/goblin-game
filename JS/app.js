@@ -1,4 +1,5 @@
 /* Imports */
+import { renderChick } from './render-utils.js';
 
 /* Get DOM Elements */
 const chickListEl = document.querySelector('.chicks');
