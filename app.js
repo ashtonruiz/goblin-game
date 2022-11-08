@@ -90,6 +90,9 @@ function chickClickHandler(chick) {
     const eggEl = document.getElementById(`chick-${chick.id}`);
     eggEl.textContent = chick.hp > 0 ? '🐣' : '🥚';
 
+    const zombieEl = document.getElementById(`chick-${chick.id}`);
+    zombieEl.textContent = chick.hp > 5 ? '🧟‍♂️' : '🐣';
+
     const srEl = document.getElementById(`chick-sr-${chick.id}`);
     srEl.textContent = chick.hp > 0 ? 'hatched chick emoji' : 'egg emoji';
 }
