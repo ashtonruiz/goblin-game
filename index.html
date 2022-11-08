@@ -56,17 +56,22 @@
                         Your HP:
                         <span id="farmer-hp">5</span>
                     </p>
+                    <img id="coop" src="./assets/coop.png" alt="chicken coop in the distance" />
                     <img
                         id="farmer-img"
                         src="./assets/farmer-img.png"
-                        alt="16 bit farmer wearing blue overalls, a red long sleeve shirt and brown hat. He carries a pitchfork over his shoulder."
+                        alt="farmer wearing blue overalls, a red long sleeve shirt and brown hat. He carries a pitchfork over his shoulder."
                     />
                 </div>
             </div>
             <div class="chick-stats">
                 <form>
-                    <label for="chick-name">Name of new chick:</label>
-                    <input name="chick-name" id="chick-name" type="text" />
+                    <input
+                        name="chick-name"
+                        id="chick-name"
+                        type="text"
+                        placeholder="name your new chick!"
+                    />
                     <button type="submit">Collect your new egg!</button>
                 </form>
                 <div class="chicks" aria-live="polite"></div>

@@ -80,6 +80,9 @@ header {
     font-size: 2rem;
     font-family: 'VT323', monospace;
     color: rgba(rgb(218, 198, 173));
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
