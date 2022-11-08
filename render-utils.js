@@ -13,12 +13,13 @@ export function renderChick(chick) {
 
     srEl.classList.add('screen-reader-only');
     srEl.id = `chick-sr-${chick.id}`;
-    srEl.textContent = chick.hp > 0 ? 'egg emoji' : 'hatched chick emoji';
-    srEl.textContent = chick.hp > 5 ? 'zombie emoji' : 'hatched chick emoji';
+    srEl.textContent = chick.hp > 3 ? 'egg emoji' : 'hatched chick emoji';
+    srEl.textContent = chick.hp > 0 ? 'zombie emoji' : 'hatched chick emoji';
 
     eggEl.id = `chick-${chick.id}`;
-    eggEl.textContent = chick.hp > 0 ? '🥚' : '🐣';
-    eggEl.textContent = chick.hp > 5 ? '🧟‍♂️' : '🐣';
+    eggEl.textContent = chick.hp > 3 ? '🧟‍♂️' : '🐣';
+    eggEl.textContent = chick.hp > 0 ? '🐣' : '🥚';
+    // eggEl.textContent = chick.hp > 5 ? '🧟‍♂️' : '🐣';
 
     if (chick.hp < 0) {
         chickEl.classList.add('hatched');
