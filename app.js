@@ -1,4 +1,3 @@
-/* Imports */
 import { renderChick } from './render-utils.js';
 
 /* Get DOM Elements */
@@ -9,7 +8,7 @@ const hatchedNumberEl = document.querySelector('#hatched-number');
 const farmerImgEl = document.querySelector('#farmer-img');
 
 /* State */
-const chicks = [{ id: 1, name: 'Walker', hp: 1 }];
+const chicks = [{ id: 1, name: 'Walker', hp: 0 }];
 
 let currentId = 4;
 let farmerHp = 5;
@@ -87,10 +86,10 @@ function chickClickHandler(chick) {
     hpEl.textContent = chick.hp < 0 ? 0 : chick.hp;
 
     const eggEl = document.getElementById(`chick-${chick.id}`);
-    eggEl.textContent = chick.hp > 0 ? '🥚' : '🐣';
+    eggEl.textContent = chick.hp > 0 ? '🐣' : '🥚';
 
     const srEl = document.getElementById(`chick-sr-${chick.id}`);
-    srEl.textContent = chick.hp > 0 ? 'egg emoji' : 'hatched chick emoji';
+    srEl.textContent = chick.hp > 0 ? 'hatched chick emoji' : 'egg emoji';
 }
 /* Display Functions */
 function displayChicks() {
