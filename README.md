@@ -27,3 +27,7 @@
 ## New chick form on submit
 
 ## -> user supplies the chick's name
+
+font family for spooky font: 'Creepster', cursive;
+font family for 8-bit style font: 'VT323', monospace;
+font family for nice simple font: 'Inter', sans-serif,
