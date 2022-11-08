@@ -1,9 +1,9 @@
 :root {
     --background: rgb(123, 148, 133);
     --header-background: rgb(117, 139, 130);
-    --primary-font: 'Inter', sans-serif, Corbel, 'Lucida Grande', 'Lucida Sans Unicode',
-        'Lucida Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana,
-        'Verdana Ref', sans-serif;
+    --primary-font: 'VT323', monospace, 'Inter', sans-serif, Corbel, 'Lucida Grande',
+        'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', 'Bitstream Vera Sans',
+        'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
 }
 
 body {

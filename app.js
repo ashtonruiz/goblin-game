@@ -12,7 +12,7 @@ const chicks = [{ id: 1, name: 'Walker', hp: 0 }];
 
 let currentId = 4;
 let farmerHp = 5;
-let hatchedCount = 0;
+let hatchedCount = 5;
 
 /* Events */
 formEl.addEventListener('submit', (e) => {
@@ -21,7 +21,7 @@ formEl.addEventListener('submit', (e) => {
     const newChick = {
         id: currentId,
         name: data.get('chick-name'),
-        hp: Math.ceil(Math.random() * 5),
+        hp: 0,
     };
     currentId++;
     chicks.push(newChick);
@@ -32,7 +32,7 @@ formEl.addEventListener('submit', (e) => {
 function chickClickHandler(chick) {
     if (chick.hp <= 0) return;
     if (Math.random() < 0.33) {
-        chick.hp--;
+        chick.hp++;
         alert('You warmed ' + chick.name + 'now the chick is toasty warm! They look so cuddly!');
     } else {
         alert(
@@ -59,7 +59,9 @@ function chickClickHandler(chick) {
     if (Math.random() < 0.27) {
         farmerHp--;
         alert(
-            "You could have sworn you just heard ' + chick.name + ' say something... it almost sounded like they said the word 'rains'?"
+            'You could have sworn you just heard ' +
+                chick.name +
+                ' say something... it almost sounded like they said the word rains?'
         );
     } else {
         alert(
@@ -69,7 +71,7 @@ function chickClickHandler(chick) {
         );
     }
 
-    if (chick.hp === 0) {
+    if (chick.hp === 5) {
         hatchedCount++;
     }
 

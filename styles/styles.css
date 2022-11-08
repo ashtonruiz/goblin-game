@@ -23,10 +23,11 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    font-size: 55px;
 }
 
 .farmer img {
-    width: 250px;
+    width: 350px;
 }
 
 .farmer p {
@@ -50,11 +51,25 @@ header {
 .chick-stats button {
     font-size: 2em;
     font-family: 'VT323', monospace;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 15px;
 }
 
 .chick-stats input {
     font-size: 3rem;
     width: 80%;
+    font-family: 'VT323', monospace;
 }
 
 .hatched-chicks {
