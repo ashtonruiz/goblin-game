@@ -31,10 +31,25 @@ formEl.addEventListener('submit', (e) => {
 
 function chickClickHandler(chick) {
     if (chick.hp <= -1) return;
+    if (Math.random() < 0.27) {
+        farmerHp--;
+        alert(
+            'You could have sworn you just heard ' +
+                chick.name +
+                ' say something... it almost sounded like they said the word rains?'
+        );
+    } else if (Math.random() > 0.27 && Math.random() < 0.33) {
+        alert(
+            'You just heard ' +
+                chick.name +
+                ' chirp so beautifully! Their voice kind of sounds like a zombie though. Ha!'
+        );
+    }
+
     if (Math.random() < 0.33) {
         chick.hp++;
         alert('You warmed ' + chick.name + 'now the chick is toasty warm! They look so cuddly!');
-    } else {
+    } else if (Math.random() > 0.33 && Math.random() > 0.5) {
         alert(
             'You tried to warm ' +
                 chick.name +
@@ -53,21 +68,6 @@ function chickClickHandler(chick) {
         alert(
             chick.name +
                 ' tried to nip at your face while you were holding them. There was a little seed on your nose! Silly chick. So cute!'
-        );
-    }
-
-    if (Math.random() < 0.27) {
-        farmerHp--;
-        alert(
-            'You could have sworn you just heard ' +
-                chick.name +
-                ' say something... it almost sounded like they said the word rains?'
-        );
-    } else {
-        alert(
-            'You just heard ' +
-                chick.name +
-                ' chirp so beautifully! Their voice kind of sounds like a zombie though. Ha!'
         );
     }
 
