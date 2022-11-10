@@ -1,27 +1,33 @@
-## The Golden Rule:
+![](wireframe.png)
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+# HTML elements
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+## -I need an input for adding fresh new little chicks along with a button
 
-## Making a plan
+## -Span tag for tracking the hatched chicks
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+## -Another span tag for tracking farmer HP
 
-Additional considerations:
+## -Chicks list
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+# State
+
+## An array for the chicks (object with an id, name and hp)
+
+## number of hatched chicks
+
+## farmer hp
+
+## currentID (in order to create new chicks with IDs)
+
+# Events
+
+## Each chick needs to be clickable and on click an event will pop up in a separate window and based on the events it will possibly increment or decrement chick or farmer's HP. It will also hatch chicks, update the DOM with new chick and farmer HP
+
+## New chick form on submit
+
+## -> user supplies the chick's name
+
+font family for spooky font: 'Creepster', cursive;
+font family for 8-bit style font: 'VT323', monospace;
+font family for nice simple font: 'Inter', sans-serif,

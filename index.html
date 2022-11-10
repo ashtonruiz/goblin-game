@@ -1,39 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Chicken Coop Simulator</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Creepster&family=VT323&display=swap"
+            rel="stylesheet"
+        />
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="styles/styles.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <h1><span aria-hidden="true">🥚🐣🧠 </span>Chicken Coop Simulator</h1>
+        </header>
 
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main>
+            <audio controls>
+                <source src="music.ogg" type="audio/ogg" />
+                <source src="./assets/music.mp3" type="audio/mpeg" />
+            </audio>
+            <div class="farmer-stats">
+                <div class="hatched-chicks">
+                    <p aria-live="polite">You have hatched: <span id="hatched-number">0</span></p>
+                    <div class="hatched-list"></div>
+                </div>
+                <div class="farmer">
+                    <p aria-live="polite">
+                        Your HP:
+                        <span id="farmer-hp">10</span>
+                    </p>
+                    <img id="coop" src="./assets/coop.png" alt="chicken coop in the distance" />
+                    <img
+                        id="farmer-img"
+                        src="./assets/farmer-img.png"
+                        alt="farmer wearing blue overalls, a red long sleeve shirt and brown hat. He carries a pitchfork over his shoulder."
+                    />
+                </div>
+            </div>
+            <div class="chick-stats">
+                <form>
+                    <input
+                        name="chick-name"
+                        id="chick-name"
+                        type="text"
+                        placeholder="name your new chick!"
+                    />
+                    <button type="submit">Collect your new egg!</button>
+                </form>
+                <div class="chicks" aria-live="polite"></div>
+            </div>
+        </main>
+    </body>
 </html>

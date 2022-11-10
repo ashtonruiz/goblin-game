@@ -1,0 +1,126 @@
+section {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 100%;
+    display: flex;
+}
+
+header {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+}
+
+.farmer-stats {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 55px;
+}
+
+.farmer img {
+    width: 350px;
+}
+
+.farmer p {
+    padding: 20px;
+}
+
+.chick-stats {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chick-stats input,
+.chick-stats button {
+    height: 100%;
+}
+
+.chick-stats button {
+    font-size: 2em;
+    font-family: 'VT323', monospace;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 15px;
+}
+
+.chick-stats input {
+    font-size: 3rem;
+    width: 80%;
+    font-family: 'VT323', monospace;
+}
+
+.hatched-chicks {
+    text-align: center;
+}
+
+.hatched-chicks p {
+    font-size: 2rem;
+    font-family: 'VT323', monospace;
+    color: rgba(rgb(218, 198, 173));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    padding: 20px;
+    display: flex;
+}
+
+.chick {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    font-size: 3rem;
+    font-family: 'VT323', monospace;
+}
+
+.hatched {
+    opacity: 0.2;
+}
+
+.game-over {
+    transform: rotate(90deg);
+}
+
+.screen-reader-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+* {
+    cursor: url(https://cur.cursors-4u.net/games/gam-10/gam934.ani),
+        url(https://cur.cursors-4u.net/games/gam-10/gam934.png), auto !important;
+}
