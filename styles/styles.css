@@ -12,6 +12,7 @@ main {
 }
 
 header {
+    position: sticky;
     display: flex;
     justify-content: center;
 }
@@ -35,7 +36,7 @@ header {
 }
 
 .chick-stats {
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -117,4 +118,9 @@ form {
     padding: 0;
     position: absolute;
     width: 1px;
+}
+
+* {
+    cursor: url(https://cur.cursors-4u.net/games/gam-10/gam934.ani),
+        url(https://cur.cursors-4u.net/games/gam-10/gam934.png), auto !important;
 }
