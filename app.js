@@ -8,7 +8,10 @@ const hatchedNumberEl = document.querySelector('#hatched-number');
 const farmerImgEl = document.querySelector('#farmer-img');
 
 /* State */
-const chicks = [{ id: 1, name: 'Walker', hp: 0 }];
+const chicks = [
+    { id: 1, name: 'Walker', hp: 0 },
+    { id: 2, name: 'Fester', hp: 1 },
+];
 
 let currentId = 4;
 let farmerHp = 10;
