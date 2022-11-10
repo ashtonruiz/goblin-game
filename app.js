@@ -20,6 +20,7 @@ let hatchedCount = 0;
 /* Events */
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (farmerHp === 0) return;
     const data = new FormData(formEl);
     const newChick = {
         id: currentId,
@@ -34,6 +35,7 @@ formEl.addEventListener('submit', (e) => {
 
 function chickClickHandler(chick) {
     if (chick.hp <= -1) return;
+    if (farmerHp === 0) return;
     if (Math.random() < 0.27) {
         farmerHp--;
         alert(
